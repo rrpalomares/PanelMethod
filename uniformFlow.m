@@ -8,13 +8,13 @@
 %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-function [vX, vY] = uniformFlow(xSize,ySize, alpha, vInf)
+function [vX, vY] = uniformFlow(gridsize, alpha, vInf)
 
-    vY = zeros(xSize, ySize);
-    vY = zeros(xSize, ySize);
+    vX = zeros(gridsize, gridsize);
+    vY = zeros(gridsize, gridsize);
 
-    for i = 1:xSize
-        for j = 1:ySize
+    for i = 1:gridsize
+        for j = 1:gridsize
             vX(i,j) = vInf * cosd(alpha);
             vY(i,j) = vInf * sind(alpha);
         end
